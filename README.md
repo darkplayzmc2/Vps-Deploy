@@ -1,4 +1,4 @@
-git clone https://github.com/hopingboyz/vps-deploy
+git clone https://github.com/darkplayzmc2/Vps-Deploy
 
 cd vps-deploy
 
@@ -29,3 +29,4 @@ WantedBy=multi-user.target
 
 sudo systemctl daemon-reload
 sudo systemctl restart unixbot
+
