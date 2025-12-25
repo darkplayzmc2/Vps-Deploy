@@ -1,39 +1,19 @@
-Clone the repository
 git clone https://github.com/hopingboyz/vps-deploy
 
 cd vps-deploy
 
-Update VPS packages
-apt update
-
-Setup environment file
 cp test.env .env
 
-Install Python pip
 apt install python3-pip -y
 
-Check Python version
-python -v
-
-Fix pip permission issue
 mkdir -p ~/.config/pip && echo -e "[global]\nbreak-system-packages = true" > ~/.config/pip/pip.conf
 
-Install dependencies
 pip install -r requirements.txt
 
-Install Docker
-apt install docker.io -y
-
-Check running Docker containers
-docker ps
-
-Create systemd service
-sudo nano /etc/systemd/system/javixbot.service
-
-Paste this exactly:
+sudo nano /etc/systemd/system/unixbot.service
 
 [Unit]
-Description=Javix Bot Discord Bot
+Description=UnixBot Discord Bot
 After=network.target
 
 [Service]
@@ -47,9 +27,5 @@ Environment=PYTHONUNBUFFERED=1
 [Install]
 WantedBy=multi-user.target
 
-Reload and start the bot
 sudo systemctl daemon-reload
-sudo systemctl restart javixbot
-
-(Optional: start on boot)
-sudo systemctl enable javixbot
+sudo systemctl restart unixbot
