@@ -1,5 +1,5 @@
 Clone the repository
-git clone https://github.com/hopingboyz/vps-deploy
+git clone https://github.com/darkplayzmc2/Vps-Deploy
 
 cd vps-deploy
 
@@ -53,3 +53,4 @@ sudo systemctl restart javixbot
 
 (Optional: start on boot)
 sudo systemctl enable javixbot
+
